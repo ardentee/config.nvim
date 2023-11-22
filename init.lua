@@ -153,11 +153,13 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
+  'catppuccin/nvim',
+  name='catppuccin',
+  lazy = false,
+  priority = 1000,
+  opts = {},
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
 
@@ -168,7 +170,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'catppuccin-mocha',
         component_separators = '|',
         section_separators = '',
       },
@@ -183,7 +185,13 @@ require('lazy').setup({
     main = 'ibl',
     opts = {},
   },
-
+  -- file explorer like nvim buffer
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
