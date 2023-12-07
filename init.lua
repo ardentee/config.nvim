@@ -151,16 +151,14 @@ require('lazy').setup({
       end,
     },
   },
-
   {
-  'catppuccin/nvim',
-  name='catppuccin',
-  lazy = false,
-  priority = 1000,
-  opts = {},
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
     config = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
-    end,
+      vim.cmd.colorscheme 'tokyonight'
+    end
   },
 
   {
@@ -170,7 +168,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'catppuccin-mocha',
+        theme = 'tokyonight',
         component_separators = '|',
         section_separators = '',
       },
@@ -249,6 +247,7 @@ vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.number = true
+vim.wo.relativenumber = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
